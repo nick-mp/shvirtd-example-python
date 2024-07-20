@@ -1,0 +1,39 @@
+version: "3.8"
+
+include:
+  - proxy.yaml
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: db
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_DATABASE: ${MYSQL_DATABASE}
+      MYSQL_USER: ${MYSQL_USER}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+    restart: on-failure
+    networks:
+      backend:
+        ipv4_address: 172.20.0.10
+ 
+  web:
+    build:
+      context: .
+      dockerfile: ./Dockerfile.python
+    environment:
+      DB_HOST: db
+      DB_USER: ${MYSQL_USER}
+      DB_PASSWORD: ${MYSQL_PASSWORD}
+      DB_NAME: ${MYSQL_DATABASE}
+    hostname: web
+    ports:
+      - 5000:5000
+    depends_on:
+      - db
+    restart: on-failure
+    networks:
+      backend:
+        ipv4_address: 172.20.0.5
