@@ -14,7 +14,7 @@ See 'snap info docker' for additional versions.
 2. Убедитесь что у вас УСТАНОВЛЕН ```docker compose```(без тире) версии не менее v2.24.X, для это выполните команду ```docker compose version```  
 
 ###  Ответ 1:
-    ![Task](https://github.com/nick-mp/shvirtd-example-python/blob/main/img/0-1.png)
+![Task](https://github.com/nick-mp/shvirtd-example-python/blob/main/img/0-1.png)
 
 ---
 
@@ -58,7 +58,7 @@ See 'snap info docker' for additional versions.
 5. Подключитесь к БД mysql с помощью команды ```docker exec <имя_контейнера> mysql -uroot -p<пароль root-пользователя>```(обратите внимание что между ключем -u и логином root нет пробела. это важно!!! тоже самое с паролем) . Введите последовательно команды (не забываем в конце символ ; ): ```show databases; use <имя вашей базы данных(по-умолчанию example)>; show tables; SELECT * from requests LIMIT 10;```.
 
 
-    ![Task](https://github.com/nick-mp/shvirtd-example-python/blob/main/img/3-2.png)
+    ![Task](https://github.com/nick-mp/shvirtd-example-python/blob/main/img/3-2-1.png)
     ![Task](https://github.com/nick-mp/shvirtd-example-python/blob/main/img/3-2-2.png)
 
 
@@ -77,6 +77,7 @@ See 'snap info docker' for additional versions.
 
 5. (Необязательная часть) Дополнительно настройте remote ssh context к вашему серверу. Отобразите список контекстов и результат удаленного выполнения ```docker ps -a```
 ### тут как не пытался не получилось
+
 ![Task](https://github.com/nick-mp/shvirtd-example-python/blob/main/img/4-5_fail.png)
 
 
@@ -102,6 +103,8 @@ See 'snap info docker' for additional versions.
 ![Task](https://github.com/nick-mp/shvirtd-example-python/blob/main/img/6-2-1.png)
 ![Task](https://github.com/nick-mp/shvirtd-example-python/blob/main/img/6-3-1.png)
 ![Task](https://github.com/nick-mp/shvirtd-example-python/blob/main/img/6-3-2.png)
+
+
     ### распаковываем архив, который мы видели на 1м скрине 6-2-1.png
 ![Task](https://github.com/nick-mp/shvirtd-example-python/blob/main/img/6-3-3.png)
 ![Task](https://github.com/nick-mp/shvirtd-example-python/blob/main/img/6-3-3.png)
