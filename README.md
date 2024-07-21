@@ -108,6 +108,7 @@ See 'snap info docker' for additional versions.
     ### распаковываем архив, который мы видели на 1м скрине 6-2-1.png
 ![Task](https://github.com/nick-mp/shvirtd-example-python/blob/main/img/6-3-3.png)
 ![Task](https://github.com/nick-mp/shvirtd-example-python/blob/main/img/6-3-3.png)
+![Task](https://github.com/nick-mp/shvirtd-example-python/blob/main/img/6-3-4.png)
 
 ## Задача 6.1
 Добейтесь аналогичного результата, используя docker cp.  
